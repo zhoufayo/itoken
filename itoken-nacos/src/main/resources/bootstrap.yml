@@ -1,0 +1,51 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: itoken-nacos
+  main:
+    allow-bean-definition-overriding: true
+
+#---
+#spring:
+#  profiles: dev
+#  cloud:
+#    nacos:
+#      config:
+#        file-extension: yml
+#        server-addr: 127.0.0.1:8848
+#        shared-dataids: ${spring.application.name}.yml,userdb.yml,user.yml,redis.yml,rocket.yml
+#        refreshable-dataids: user.yml
+#---
+#spring:
+#  profiles: test
+#  cloud:
+#    nacos:
+#      config:
+#        file-extension: yml
+#        server-addr: 147.139.182.225:8848
+#        shared-dataids: ${spring.application.name}.yml,userdb.yml,user.yml,redis.yml,rocket.yml
+#        refreshable-dataids: user.yml
+#
+#---
+#spring:
+#  profiles: pro
+#  cloud:
+#    nacos:
+#      config:
+#        file-extension: yml
+#        server-addr: 147.139.168.27:8848
+#        shared-dataids: ${spring.application.name}.yml,userdb.yml,user.yml,redis.yml,rocket.yml
+#        refreshable-dataids: user.yml
+
+
+---
+spring:
+  profiles: dev
+  cloud:
+    nacos:
+      config:
+        file-extension: yml
+        server-addr: 127.0.0.1:8848
+        shared-dataids: ${spring.application.name}.yml,userdb.yml,user.yml,redis.yml,rocket.yml
+        refreshable-dataids: user.yml
